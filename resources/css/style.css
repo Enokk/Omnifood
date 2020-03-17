@@ -197,3 +197,33 @@ h2::after {
   border: 1px solid #bf6516;
   color: #ffffff;
 }
+
+/* ------------------------------------------------------- */
+/* REUSABLE */
+/* ------------------------------------------------------- */
+.section-meals {
+  padding: 0px;
+}
+
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.meal-photo img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+}
