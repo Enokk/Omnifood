@@ -1,7 +1,11 @@
-/*
-  base orange: #e67e22
-  dark orange: #bf6516
-*/
+:root {
+  --main-theme-color: #e67e22;
+  --alt-theme-color: #bf6516;
+  --dark-color: #555555;
+  --alt-dark-color: #000000;
+  --light-color: #ffffff;
+  --alt-light-color: #f4f4f4;
+}
 
 /* ------------------------------------------------------- */
 /* BASIC SETUP */
@@ -14,12 +18,23 @@
 }
 
 html {
-  background-color: #ffffff;
-  color: #555555;
+  background-color: var(--light-color);
+  color: var(--dark-color);
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+.clear-fix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 
 /* ------------------------------------------------------- */
@@ -52,7 +67,7 @@ h3 {
 h1 {
   margin-top: 0;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: var(--light-color);
   font-size: 240%;
   word-spacing: 4px;
 }
@@ -72,7 +87,7 @@ h3 {
 h2::after {
   display: block;
   height: 2px;
-  background-color: #e67e22;
+  background-color: var(--main-theme-color);
   content: " ";
   width: 100px;
   margin: 0 auto;
@@ -97,7 +112,7 @@ h2::after {
 .icon-big {
   display: block;
   font-size: 350%;
-  color: #e67e22;
+  color: var(--main-theme-color);
   margin-bottom: 10px;
 }
 
@@ -115,33 +130,50 @@ h2::after {
 
 .btn-full:link,
 .btn-full:visited {
-  background-color: #e67e22;
-  border: 1px solid #e67e22;
-  color: #ffffff;
+  background-color: var(--main-theme-color);
+  border: 1px solid var(--main-theme-color);
+  color: var(--light-color);
   margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-  border: 1px solid #e67e22;
-  color: #e67e22;
+  border: 1px solid var(--main-theme-color);
+  color: var(--main-theme-color);
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #bf6516;
+  background-color: var(--alt-theme-color);
 }
 
 .btn-full:hover,
 .btn-full:active {
-  border: 1px solid #bf6516;
-  color: #ffffff;
+  border: 1px solid var(--alt-theme-color);
+  color: var(--light-color);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-  border: 1px solid #bf6516;
-  color: #ffffff;
+  border: 1px solid var(--alt-theme-color);
+  color: var(--light-color);
+}
+
+/* ------- LINKS ------- */
+
+a:link,
+a:visited {
+  color: var(--main-theme-color);
+  text-decoration: none;
+  padding: 1px;
+  border-bottom: 1px solid var(--main-theme-color);
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: var(--dark-color);
+  border-bottom: 1px solid transparent;
 }
 
 /* ------------------------------------------------------- */
@@ -179,7 +211,7 @@ header {
 .main-nav li a:link,
 .main-nav li a:visited {
   padding: 8px 0;
-  color: #ffffff;
+  color: var(--light-color);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
@@ -189,7 +221,7 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-bottom: 2px solid #e67e22;
+  border-bottom: 2px solid var(--main-theme-color);
 }
 
 .hero-text-box {
@@ -217,7 +249,7 @@ header {
 /* ------------------------------------------------------- */
 
 .section-meals {
-  padding: 0px;
+  padding: 0;
 }
 
 .meals-showcase {
@@ -233,9 +265,9 @@ header {
 
 .meal-photo {
   width: 100%;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
-  background-color: #000000;
+  background-color: var(--alt-dark-color);
 }
 
 .meal-photo img {
@@ -249,4 +281,91 @@ header {
 .meal-photo img:hover {
   transform: scale(1.03);
   opacity: 1;
+}
+
+/* ------------------------------------------------------- */
+/* HOW IT WORKS */
+/* ------------------------------------------------------- */
+
+.section-steps {
+  background-color: var(--alt-light-color);
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.works-step div {
+  color: var(--main-theme-color);
+  border: 2px solid var(--main-theme-color);
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 6px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* ------------------------------------------------------- */
+/* CITIES */
+/* ------------------------------------------------------- */
+
+.section-cities .box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.section-cities .box h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: var(--main-theme-color);
+  font-size: 120%;
+  /* to align text and icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 10px;
 }
