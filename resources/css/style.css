@@ -1,6 +1,8 @@
 /*
   base orange: #e67e22
   dark orange: #bf6516
+  text grey: 555555
+  alt white: f4f4f4
 */
 
 /* ------------------------------------------------------- */
@@ -20,6 +22,17 @@ html {
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+.clear-fix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 
 /* ------------------------------------------------------- */
@@ -217,7 +230,7 @@ header {
 /* ------------------------------------------------------- */
 
 .section-meals {
-  padding: 0px;
+  padding: 0;
 }
 
 .meals-showcase {
@@ -233,7 +246,7 @@ header {
 
 .meal-photo {
   width: 100%;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   background-color: #000000;
 }
@@ -249,4 +262,54 @@ header {
 .meal-photo img:hover {
   transform: scale(1.03);
   opacity: 1;
+}
+
+/* ------------------------------------------------------- */
+/* HOW IT WORKS */
+/* ------------------------------------------------------- */
+
+.section-steps {
+  background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.works-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 6px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
 }
