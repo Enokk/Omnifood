@@ -5,6 +5,8 @@
   --alt-dark-color: #000000;
   --light-color: #ffffff;
   --alt-light-color: #f4f4f4;
+  --lighter-alt-light-color: #fcfcfc;
+  --darker-alt-lignt-color: #ececec;
 }
 
 /* ------------------------------------------------------- */
@@ -181,8 +183,7 @@ a:active {
 /* ------------------------------------------------------- */
 
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -412,4 +413,61 @@ cite img {
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+/* ------------------------------------------------------- */
+/* PLANS */
+/* ------------------------------------------------------- */
+
+.section-plans {
+  background-color: var(--alt-light-color);
+}
+
+.plan-box {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 3px solid var(--alt-light-color);
+}
+
+.plan-box div:first-child {
+  background-color: var(--lighter-alt-light-color);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 4px 2px var(--darker-alt-lignt-color);
+}
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: var(--main-theme-color);
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
 }
