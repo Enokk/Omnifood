@@ -1,12 +1,12 @@
 :root {
-  --main-theme-color: #e67e22;
-  --alt-theme-color: #bf6516;
-  --dark-color: #555555;
-  --alt-dark-color: #000000;
-  --light-color: #ffffff;
-  --alt-light-color: #f4f4f4;
-  --lighter-alt-light-color: #fcfcfc;
-  --darker-alt-lignt-color: #ececec;
+  --main-color-1: #e67e22;
+  --main-color-2: #bf6516;
+  --dark-color-1: #555555;
+  --light-color-1: #ffffff;
+  --light-color-2: #fcfcfc;
+  --light-color-3: #f4f4f4;
+  --lignt-color-4: #ececec;
+  --light-color-5: #cccccc;
 }
 
 /* ------------------------------------------------------- */
@@ -20,8 +20,8 @@
 }
 
 html {
-  background-color: var(--light-color);
-  color: var(--dark-color);
+  background-color: var(--light-color-1);
+  color: var(--dark-color-1);
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -69,7 +69,7 @@ h3 {
 h1 {
   margin-top: 0;
   margin-bottom: 20px;
-  color: var(--light-color);
+  color: var(--light-color-1);
   font-size: 240%;
   word-spacing: 4px;
 }
@@ -89,7 +89,7 @@ h3 {
 h2::after {
   display: block;
   height: 2px;
-  background-color: var(--main-theme-color);
+  background-color: var(--main-color-1);
   content: " ";
   width: 100px;
   margin: 0 auto;
@@ -114,14 +114,15 @@ h2::after {
 .icon-big {
   display: block;
   font-size: 350%;
-  color: var(--main-theme-color);
+  color: var(--main-color-1);
   margin-bottom: 10px;
 }
 
 /* ------- BUTTONS ------- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -131,50 +132,53 @@ h2::after {
 }
 
 .btn-full:link,
-.btn-full:visited {
-  background-color: var(--main-theme-color);
-  border: 1px solid var(--main-theme-color);
-  color: var(--light-color);
+.btn-full:visited,
+input[type="submit"] {
+  background-color: var(--main-color-1);
+  border: 1px solid var(--main-color-1);
+  color: var(--light-color-1);
   margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-  border: 1px solid var(--main-theme-color);
-  color: var(--main-theme-color);
+  border: 1px solid var(--main-color-1);
+  color: var(--main-color-1);
 }
 
 .btn:hover,
-.btn:active {
-  background-color: var(--alt-theme-color);
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: var(--main-color-2);
 }
 
 .btn-full:hover,
 .btn-full:active {
-  border: 1px solid var(--alt-theme-color);
-  color: var(--light-color);
+  border: 1px solid var(--main-color-2);
+  color: var(--light-color-1);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-  border: 1px solid var(--alt-theme-color);
-  color: var(--light-color);
+  border: 1px solid var(--main-color-2);
+  color: var(--light-color-1);
 }
 
 /* ------- LINKS ------- */
 
 a:link,
 a:visited {
-  color: var(--main-theme-color);
+  color: var(--main-color-1);
   text-decoration: none;
   padding: 1px;
-  border-bottom: 1px solid var(--main-theme-color);
+  border-bottom: 1px solid var(--main-color-1);
   transition: border-bottom 0.2s, color 0.2s;
 }
 
 a:hover,
 a:active {
-  color: var(--dark-color);
+  color: var(--dark-color-1);
   border-bottom: 1px solid transparent;
 }
 
@@ -213,7 +217,7 @@ header {
 .main-nav li a:link,
 .main-nav li a:visited {
   padding: 8px 0;
-  color: var(--light-color);
+  color: var(--light-color-1);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
@@ -223,7 +227,7 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-bottom: 2px solid var(--main-theme-color);
+  border-bottom: 2px solid var(--main-color-1);
 }
 
 .hero-text-box {
@@ -269,7 +273,7 @@ header {
   width: 100%;
   margin: 0;
   overflow: hidden;
-  background-color: var(--alt-dark-color);
+  background-color: black;
 }
 
 .meal-photo img {
@@ -290,7 +294,7 @@ header {
 /* ------------------------------------------------------- */
 
 .section-steps {
-  background-color: var(--alt-light-color);
+  background-color: var(--light-color-3);
 }
 
 .steps-box:first-child {
@@ -317,8 +321,8 @@ header {
 }
 
 .works-step div {
-  color: var(--main-theme-color);
-  border: 2px solid var(--main-theme-color);
+  color: var(--main-color-1);
+  border: 2px solid var(--main-color-1);
   border-radius: 50%;
   height: 55px;
   width: 55px;
@@ -363,7 +367,7 @@ header {
   display: inline-block;
   width: 30px;
   text-align: center;
-  color: var(--main-theme-color);
+  color: var(--main-color-1);
   font-size: 120%;
   /* to align text and icons */
   line-height: 120%;
@@ -380,7 +384,7 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(img/back-customers.jpg);
   background-size: cover;
-  color: var(--light-color);
+  color: var(--light-color-1);
   background-attachment: fixed;
 }
 
@@ -420,11 +424,11 @@ cite img {
 /* ------------------------------------------------------- */
 
 .section-plans {
-  background-color: var(--alt-light-color);
+  background-color: var(--light-color-3);
 }
 
 .plan-box {
-  background-color: var(--light-color);
+  background-color: var(--light-color-1);
   border-radius: 10px;
   width: 90%;
   margin-left: 5%;
@@ -432,11 +436,11 @@ cite img {
 
 .plan-box div {
   padding: 15px;
-  border-bottom: 3px solid var(--alt-light-color);
+  border-bottom: 3px solid var(--light-color-3);
 }
 
 .plan-box div:first-child {
-  background-color: var(--lighter-alt-light-color);
+  background-color: var(--light-color-2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -445,14 +449,14 @@ cite img {
   text-align: center;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  box-shadow: 0 4px 2px var(--darker-alt-lignt-color);
+  box-shadow: 0 4px 2px var(--lignt-color-4);
 }
 
 .plan-price {
   font-size: 300%;
   margin-bottom: 10px;
   font-weight: 100;
-  color: var(--main-theme-color);
+  color: var(--main-color-1);
 }
 
 .plan-price span {
@@ -470,4 +474,36 @@ cite img {
 
 .plan-box ul li {
   padding: 5px 0;
+}
+
+/* ------------------------------------------------------- */
+/* CONTACTS */
+/* ------------------------------------------------------- */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid var(--light-color-5);
+  border-radius: 3px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 0 20px 20px 2px;
+  transform: scale(1.5);
+}
+
+*:focus {
+  outline: none;
 }
