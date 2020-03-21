@@ -450,6 +450,7 @@ cite img {
 }
 
 .plan-box div:first-child {
+  padding-left: 30px;
   background-color: var(--light-color-2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
