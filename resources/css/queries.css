@@ -1,0 +1,228 @@
+/* ------- 1024px <= WIDTH <= 1200 ------- */
+@media only screen and (max-width: 1200px) {
+  .hero-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  .row {
+    padding: 0% 2%;
+  }
+
+  .section-steps .row {
+    padding: 0;
+  }
+
+  .works-step {
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .works-step p {
+    font-size: 90%;
+  }
+
+  .works-step:last-of-type {
+    margin-bottom: 45px;
+  }
+
+  .plan-box div ul {
+    font-size: 90%;
+  }
+}
+
+/* ------- 1023 <= WIDTH <= 768------- */
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .main-nav li {
+    margin-left: 25px;
+  }
+
+  .long-copy {
+    width: 80%;
+  }
+
+  .steps-box {
+    margin-top: 10px;
+  }
+
+  .steps-box:last-child {
+    margin-top: 30px;
+  }
+
+  .app-screen {
+    width: 220px;
+  }
+
+  .works-step {
+    margin-bottom: 15px;
+  }
+
+  .works-step:last-of-type {
+    margin-bottom: 60px;
+  }
+
+  .btn-app img {
+    height: 40px;
+  }
+
+  .icon-small {
+    margin-right: 0;
+  }
+
+  .section-cities .box {
+    font-size: 80%;
+  }
+
+  .section-cities .box h3 {
+    margin-bottom: 15px;
+    margin-left: 10px;
+  }
+
+  .plan-box {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .plan-price {
+    font-size: 250%;
+  }
+
+  .plan-box ul {
+    font-size: 85%;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+}
+
+/* ------- 768 <= WIDTH <= 810 ------- */
+@media only screen and (max-width: 810px) {
+  .plan-box div ul {
+    font-size: 80%;
+  }
+}
+
+/* ------- 481 <= WIDTH <= 767 ------- */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 21px;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+
+  .row,
+  .hero-text-box {
+    padding: 0 4%;
+  }
+
+  .col {
+    width: 100%;
+    margin: 0 0 4% 0;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  h1 {
+    font-size: 180%;
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+  .long-copy {
+    width: 100%;
+    margin: 0;
+    font-size: 90%;
+  }
+
+  .app-screen {
+    width: 40%;
+  }
+
+  .steps-box:first-child {
+    text-align: center;
+  }
+
+  .works-step {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .works-step:last-child {
+    margin-bottom: 20px;
+  }
+
+  .works-step p {
+    position: absolute;
+    left: 85px;
+  }
+
+  .works-step div {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    margin-left: 5%;
+    padding: 3px 4px 6px 4px;
+    font-size: 120%;
+  }
+
+  .steps-box .download-links {
+    text-align: center;
+  }
+
+  .box div,
+  .plan-box {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-nav {
+    float: none;
+  }
+
+  .social-links {
+    float: none;
+  }
+}
+
+/* ------- 481 <= WIDTH <= 620 ------- */
+@media only screen and (max-width: 620px) {
+  h1 {
+    font-size: 150%;
+  }
+
+  h2 {
+    font-size: 112%;
+  }
+}
+
+/* ------- WIDTH <= 480 ------- */
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 25px 0;
+  }
+
+  .box div,
+  .plan-box,
+  .contact-form {
+    width: 100%;
+  }
+}
