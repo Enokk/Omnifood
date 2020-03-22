@@ -29,13 +29,15 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   background-color: var(--light-color-1);
   color: var(--dark-color-2);
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .clear-fix {
@@ -78,7 +80,7 @@ h3 {
 
 h1 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: var(--light-color-1);
   font-size: 240%;
   word-spacing: 4px;
@@ -134,10 +136,11 @@ h2::after {
 .btn:visited,
 input[type="submit"] {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 8px 28px 10px 30px;
   font-weight: 300;
   text-decoration: none;
   border-radius: 200px;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
@@ -183,6 +186,7 @@ a:visited {
   text-decoration: none;
   padding: 1px;
   border-bottom: 1px solid var(--main-color-1);
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
   transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -197,6 +201,14 @@ a:active {
 /* ------------------------------------------------------- */
 
 header {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(img/hero.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
   background-attachment: fixed;
   background-size: cover;
@@ -232,6 +244,7 @@ header {
   text-transform: uppercase;
   font-size: 90%;
   border-bottom: 2px solid transparent;
+  -webkit-transition: border 0.2s;
   transition: border 0.2s;
 }
 
@@ -245,6 +258,7 @@ header {
   width: 1140px;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -252,11 +266,8 @@ header {
 /* FEATURES */
 /* ------------------------------------------------------- */
 
-.section-features {
-  text-align: center;
-}
-
 .section-features .long-copy {
+  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -290,11 +301,16 @@ header {
   opacity: 0.7;
   width: 100%;
   height: auto;
+  -webkit-transform: scale(1.15);
   transform: scale(1.15);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo img:hover {
+  -webkit-transform: scale(1.03);
   transform: scale(1.03);
   opacity: 1;
 }
@@ -319,10 +335,11 @@ header {
 }
 
 .app-screen {
-  width: 40%;
+  width: 210px;
 }
 
 .works-step {
+  width: 85%;
   margin-bottom: 50px;
 }
 
@@ -337,7 +354,7 @@ header {
   height: 55px;
   width: 55px;
   text-align: center;
-  padding: 6px;
+  padding: 7px 6px 6px 5px;
   float: left;
   font-size: 150%;
   margin-right: 25px;
@@ -365,8 +382,8 @@ header {
 }
 
 .section-cities .box h3 {
-  text-align: center;
   margin-bottom: 20px;
+  margin-left: 15px;
 }
 
 .city-feature {
@@ -391,6 +408,14 @@ header {
 /* ------------------------------------------------------- */
 
 .section-testimonials {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(rgba(0, 0, 0, 0.8))
+    ),
+    url(img/back-customers.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(img/back-customers.jpg);
   background-size: cover;
@@ -449,6 +474,10 @@ cite img {
   border-bottom: 3px solid var(--light-color-3);
 }
 
+.plan-box div h3 {
+  margin: 5px;
+}
+
 .plan-box div:first-child {
   padding-left: 30px;
   background-color: var(--light-color-2);
@@ -477,6 +506,7 @@ cite img {
 
 .plan-price-meal {
   font-size: 80%;
+  margin-left: 5px;
 }
 
 .plan-box ul {
@@ -512,6 +542,7 @@ textarea {
 
 input[type="checkbox"] {
   margin: 0 20px 20px 2px;
+  -webkit-transform: scale(1.5);
   transform: scale(1.5);
 }
 
@@ -526,7 +557,7 @@ input[type="checkbox"] {
 footer {
   font-size: 80%;
   background-color: var(--dark-color-1);
-  padding: 50px 0 80px 0;
+  padding: 30px 0 60px 0;
 }
 
 .footer-nav {
@@ -558,6 +589,7 @@ footer {
   color: var(--dark-color-3);
   text-decoration: none;
   border: 0;
+  -webkit-transition: color 0.2;
   transition: color 0.2;
 }
 
@@ -575,6 +607,7 @@ footer {
 .ion-social-twitter,
 .ion-social-googleplus,
 .ion-social-instagram {
+  -webkit-transition: color 0.2;
   transition: color 0.2;
 }
 
@@ -601,5 +634,5 @@ footer {
 footer p {
   color: var(--dark-color-3);
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
