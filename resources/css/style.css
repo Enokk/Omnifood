@@ -216,11 +216,19 @@ header {
   height: 100vh;
 }
 
-.logo {
+.logo-white {
   height: 100px;
   width: auto;
   float: left;
   margin-top: 20px;
+}
+
+.logo {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0;
 }
 
 /* ------- NAVIGATION BAR ------- */
@@ -260,6 +268,36 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+/* ------- STICKY NAVIGATION ------- */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--light-color-1);
+  box-shadow: 0 2px 2px var(--light-color-5);
+  z-index: 9999;
+}
+
+.sticky .main-nav {
+  margin-top: 20px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  padding: 15px 0;
+  color: var(--dark-color-2);
+}
+
+.sticky .logo-white {
+  display: none;
+}
+
+.sticky .logo {
+  display: block;
 }
 
 /* ------------------------------------------------------- */

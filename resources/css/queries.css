@@ -45,6 +45,14 @@
     margin-left: 25px;
   }
 
+  .sticky .main-nav {
+    margin-top: 18px;
+  }
+
+  .sticky .logo {
+    height: 45px;
+  }
+
   .long-copy {
     width: 80%;
   }
@@ -132,6 +140,10 @@
   }
 
   .main-nav {
+    display: none;
+  }
+
+  .sticky {
     display: none;
   }
 
