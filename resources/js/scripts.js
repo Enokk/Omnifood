@@ -53,4 +53,55 @@ $(document).ready(function() {
         }
       }
     });
+
+  /* ------ Animations on scroll ------*/
+  new Waypoint({
+    element: $(".js--wp-1"),
+    handler: function(direction) {
+      $(".js--wp-1").addClass("animated fadeIn");
+    },
+    offset: "50%"
+  });
+
+  new Waypoint({
+    element: $(".js--wp-2"),
+    handler: function(direction) {
+      $(".js--wp-2").addClass("animated fadeInUp");
+    },
+    offset: "50%"
+  });
+
+  new Waypoint({
+    element: $(".js--wp-3"),
+    handler: function(direction) {
+      $(".js--wp-3").addClass("animated fadeIn");
+    },
+    offset: "50%"
+  });
+
+  new Waypoint({
+    element: $(".js--wp-4"),
+    handler: function(direction) {
+      $(".js--wp-4").addClass("animated pulse");
+    },
+    offset: "50%"
+  });
+
+  /* ------ Mobile navigation ------*/
+  $(".js--icon-mobile-nav").click(function() {
+    var sticky = $(".sticky");
+    var icon = $(".js--icon-mobile-nav i");
+
+    $(".js--main-nav").slideToggle(200);
+
+    if (icon.hasClass("ion-navicon-round")) {
+      sticky.css("height", "240px");
+      icon.removeClass("ion-navicon-round");
+      icon.addClass("ion-close-round");
+    } else {
+      sticky.css("height", "55");
+      icon.removeClass("ion-close-round");
+      icon.addClass("ion-navicon-round");
+    }
+  });
 });

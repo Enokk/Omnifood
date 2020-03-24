@@ -139,12 +139,50 @@
     margin: 0 0 4% 0;
   }
 
+  .icon-mobile-nav {
+    display: inline-block;
+  }
+
   .main-nav {
     display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .main-nav li {
+    display: block;
+  }
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: 0;
+    padding: 5px 0;
+    font-size: 100%;
+    text-align: right;
   }
 
   .sticky {
-    display: none;
+    transition: height 0.3s;
+  }
+
+  .sticky .icon-mobile-nav {
+    margin-top: 7px;
+  }
+
+  .sticky .icon-mobile-nav i {
+    color: var(--dark-color-2);
+  }
+
+  .sticky .main-nav {
+    margin-top: 0;
+    top: 50px;
+  }
+
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+    padding: 10px 0;
   }
 
   h1 {
