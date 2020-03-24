@@ -86,4 +86,22 @@ $(document).ready(function() {
     },
     offset: "50%"
   });
+
+  /* ------ Mobile navigation ------*/
+  $(".js--icon-mobile-nav").click(function() {
+    var sticky = $(".sticky");
+    var icon = $(".js--icon-mobile-nav i");
+
+    $(".js--main-nav").slideToggle(200);
+
+    if (icon.hasClass("ion-navicon-round")) {
+      sticky.css("height", "240px");
+      icon.removeClass("ion-navicon-round");
+      icon.addClass("ion-close-round");
+    } else {
+      sticky.css("height", "55");
+      icon.removeClass("ion-close-round");
+      icon.addClass("ion-navicon-round");
+    }
+  });
 });
